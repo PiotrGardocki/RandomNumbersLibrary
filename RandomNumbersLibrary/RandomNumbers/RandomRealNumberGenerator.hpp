@@ -2,6 +2,7 @@
 #define RANDOMREALNUMBERGENERATOR_HPP_
 
 #include <type_traits>
+#include <utility>
 #include "RandomGeneratorBase.hpp"
 
 template <typename T>
@@ -13,9 +14,11 @@ class RandomRealNumberGenerator : private RandomGeneratorBase
 		RandomRealNumberGenerator(const T & min, const T & max);
 
 		void setNewRange(const T & min, const T & max);
+		void setNewRange(const std::pair<T, T> & range);
 
 		T getMin() const;
 		T getMax() const;
+		std::pair<T, T> getRange() const;
 
 		T generateRandom();
 		T operator()();
