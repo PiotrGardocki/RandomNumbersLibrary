@@ -1,11 +1,16 @@
 # RandomNumbersLibrary
-RandomNumbersLibrary is a simple c++ library created for convenient generating random numbers. Library supports generating both integer and real types.
-Library is based on c++ libraries ```random``` and ```chrono```. It was made to avoid creating number engines and creating seed from current type.
-It automatically creates engine with seed for any thread that tries to generate random number. That means, all of threads have their own seed.
+RandomNumbersLibrary is a simple c++ library created for convenient generating random numbers.
+Library supports generating both integer and real types.
+
+Library is based on c++ libraries ```random``` and ```chrono```.
+It was made to avoid creating number engines and creating seed from current time.
+It automatically creates engine with seed for any thread that tries to generate random number.
+
+That means, **all of threads have their own engines with different seeds**.
 
 ### Generators
 There are two numbers generators: ```RandomIntegerGenerator<T>``` and ```RandomRealNumberGenerator<T>```.
-Both templates allow only c++ built-in integer and real number types.
+Both **templates allow only c++ built-in integer and real number types**.
 
 ### Usage
 
