@@ -25,7 +25,7 @@ RandomRealNumberGenerator<double> randomReal(-10., 10.);
 
 /// setting new range
 randomInt.setNewRange(0, 20);
-std::pair<int, int> newRange(10, 30;
+std::pair<int, int> newRange(10, 30);
 randomInt.setNewRange(newRange);
 
 /// checking range
