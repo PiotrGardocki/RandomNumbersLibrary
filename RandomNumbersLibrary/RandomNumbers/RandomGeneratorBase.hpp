@@ -5,13 +5,13 @@
 
 class RandomGeneratorBase
 {
-	protected:
-        RandomGeneratorBase() = default;
+protected:
+	RandomGeneratorBase() = default;
 
-		std::mt19937 & getEngine() const;
+	std::mt19937 & getEngine() const;
 
-    private:
-		static thread_local std::mt19937 mEngine;
+private:
+	static thread_local std::mt19937 mEngine;
 };
 
 #endif // RANDOMGENERATORBASE_HPP_
